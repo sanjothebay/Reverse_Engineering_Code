@@ -6,11 +6,16 @@ https://github.com/sanjothebay/Reverse_Engineering_Code
 
 # Table of contents
 
-1. [Instruction](#Instruction)                6. [public](#public)
-2. [User Storie](#User_Storie)                7. [routes](#routes)
-3. [Getting Started](#Getting_Started)        8. [.gitignore](#.gitignore)
-4. [config](#config)                          9. [package.json](#package.json)
-5. [models](#models)                         10. [server.js](#server.js)
+1. [Instruction](#Instruction)               
+2. [User Storie](#User_Storie)              
+3. [Getting Started](#Getting_Started)      
+4. [config](#config)                          
+5. [models](#models)                         
+6. [public](#public)
+7. [routes](#routes)
+8. [.gitignore](#.gitignore)
+9. [package.json](#package.json)
+10. [server.js](#server.js)
 
 
 
@@ -40,7 +45,7 @@ SO THAT I can use it as a starting point for a new project
 All the recommended files and directories structure:
 
 ```
-.
+
 ┌────── config
 │   │   └── middleware
 │   │       └── isAuthentication.js

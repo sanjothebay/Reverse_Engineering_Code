@@ -126,15 +126,36 @@ these are methods that run during the various phases of the User Model lifecycle
 
 ## public <a name="public"></a>
 
-Folder js
+Pubic Folder:
+The node_modules directory is only for build tools. The package. json file in the app root defines what libraries will be installed into node_modules when you run npm install . Very often with an angular app, on your dev machine or on a build server, you use other Javascript libraries from npm.
+
+
+Folder js: .....
+
+
+File login.js:
+
+
+File members.js:
+
+
+File signup.js:
+
+
 
 ![image](https://user-images.githubusercontent.com/67298961/105268833-7dc14580-5b58-11eb-907c-410b6e9b20a6.png)
 
-Folder stylesheets
+Folder stylesheets: ....
+
+File stlye.css
 
 ![image](https://user-images.githubusercontent.com/67298961/105268970-b95c0f80-5b58-11eb-8e77-2d4ef02f8bf1.png)
 
-Files .html
+Files login.html:
+
+File members.html:
+
+File signup.html:
 
 ![image](https://user-images.githubusercontent.com/67298961/105269152-0213c880-5b59-11eb-9ce2-724c801146b1.png)
 
@@ -166,12 +187,23 @@ the .get("/members") is using the isAuthenticated middleware and is checking if 
 
 ## .gitignore <a name=".gitignore"></a>
 
+gitignore files contain patterns that are matched against file names in your repository to determine whether or not they should be ignored. Ignoring files in Git. Git ignore patterns. Shared .gitignore files in your repository. Personal Git ignore rules.
+
 ![image](https://user-images.githubusercontent.com/67298961/105269306-469f6400-5b59-11eb-9e87-21fbd6c79ed8.png)
 
 ## package.json <a name="package.json"></a>
 
+All npm packages contain a file, usually in the project root, called package. json - this file holds various metadata relevant to the project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies
+A package. json is a JSON file that exists at the root of a Javascript/Node project. It holds metadata relevant to the project and it is used for managing the project's dependencies, scripts, version and a whole lot more
+
 ![image](https://user-images.githubusercontent.com/67298961/105269381-65055f80-5b59-11eb-9f1e-d337ce77671d.png)
 
 ## server.js <a name="server.js"></a>
+
+its requiring express, express-session these are necessary npm packages to have the app fuctioning in with node. Its requiring "./config/passport" File as it been configured. Its Setting up port and requiring models for syncing with var PORT = process.env.PORT || 8080; 
+its also Creating the express app and configuring middleware this is needed for authentication in the password 
+Its is also requiring our routes to the HTML and the API . "./routes/html-routes.js"  "./routes/api-routes.js"  
+The Server connection 
+db.sequelize.sync() to sync all the models at the same time. used in index.js file. it Sync the  database and its displays a login message to the End-User.
 
 ![image](https://user-images.githubusercontent.com/67298961/105269430-85cdb500-5b59-11eb-85c5-72500ce10197.png)

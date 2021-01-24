@@ -161,21 +161,19 @@ The loginUser function the POST method is called to add the resource (to the "ap
 
 #### File stlye.css
 
-The css style folder is given a margin-top of 50px to both the signup and login Form input section so its not all on the top and is centered a little bit with its is It is referencing the form for the signup and login HTML 
+The css style folder is given a margin-top of 50px to both the signup and login Form input section so its not all on the top and is centered a little bit with its is It is referencing the form for the signup and login HTML
 
 ![image](https://user-images.githubusercontent.com/67298961/105268970-b95c0f80-5b58-11eb-8e77-2d4ef02f8bf1.png)
 
 #### Files login.html:
 
-This is the First page the End-User will see if he is not already sign-up. 
-The login.html will render (Display) the Login Form. 
+This is the First page the End-User will see if he is not already sign-up.
+The login.html will render (Display) the Login Form.
 The Head Section is showing the Title to Display on the web Tab. It has a UTF-8 for the encoding Defined by the Unicode Standard it supports many languages and can accommodate pages and forms in any mixture of those languages. Its use also eliminates the need for server-side logic to individually determine the character encoding for each page served or each incoming form submission.
 It's Grabbing the Bootstrap style for the Styling of the Form as it is grabbed from Bootstrap. We are also referencing the "stylesheets/style.css" folder to added the margin-top of 50px (See File stlye.css explanation (on top)).  
-The next section is the Form that is being used from Bootstrap. It has on Row for the whole Form, It's using a <div> to divide within the one Row the page will use 3 sections from the 12 that its has is will work well with medium size monitors. (Default with the rest using bootstraps column structure.). It's Displaying Login Form Words to show it's the Login Form page.  It has an input section for the End-user to enter is Email and Password. The Input  Section are Displaying the words Email and Password, In order for the End-User to know which input is which. There is a Login in Button Being Displayed for the End-User to use when they are Done to log in.
-The Last section is displaying (rendering) Or sign up and it has a href to reference and reroute the End-User to the login page if they have not sign up. 
+The next section is the Form that is being used from Bootstrap. It has on Row for the whole Form, It's using a <div> to divide within the one Row the page will use 3 sections from the 12 that its has is will work well with medium size monitors. (Default with the rest using bootstraps column structure.). It's Displaying Login Form Words to show it's the Login Form page. It has an input section for the End-user to enter is Email and Password. The Input Section are Displaying the words Email and Password, In order for the End-User to know which input is which. There is a Login in Button Being Displayed for the End-User to use when they are Done to log in.
+The Last section is displaying (rendering) Or sign up and it has a href to reference and reroute the End-User to the login page if they have not sign up.
 The bottom script section has the jquery fundamental structure so we can use jquery in our code. In the last script section we are referencing our login.js file to be able to use the form and the function it comes with
-  
-
 
 #### File members.html:
 

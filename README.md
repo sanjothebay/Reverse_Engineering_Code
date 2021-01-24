@@ -130,9 +130,9 @@ Pubic Folder:
 The node_modules directory is only for build tools. The package. json file in the app root defines what libraries will be installed into node_modules when you run npm install . Very often with an angular app, on your dev machine or on a build server, you use other Javascript libraries from npm.
 
 
-# Folder js: .....
+### Folder js: .....
 
-# File login.js:
+#### File login.js:
 
 loginForm, emailInput, and passwordInput are VARIABLES referencing the html input form. 
 There is event.preventDefault(); Function to prevent the page from reloding.
@@ -143,12 +143,12 @@ The loginUser function the POST method is called to add the resource   (to the "
 
 
 
-# File members.js:
+#### File members.js:
 
 the GET request is retrieving data to figure out which End-User is logged in. It will then run the function to display the data in the HTML (members.html) for (".member-name").
 
 
-# File signup.js:
+### File signup.js:
 
 loginForm, emailInput, and passwordInput are VARIABLES referencing the HTML input form this is to Display the input by the End- User. 
 There is event.preventDefault(); Function to prevent the page from reloding.

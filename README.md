@@ -130,36 +130,32 @@ Pubic Folder:
 The node_modules directory is only for build tools. The package. json file in the app root defines what libraries will be installed into node_modules when you run npm install . Very often with an angular app, on your dev machine or on a build server, you use other Javascript libraries from npm.
 
 
-##Folder js: .....
+# Folder js: .....
 
-#File login.js:
+# File login.js:
 
 loginForm, emailInput, and passwordInput are VARIABLES referencing the html input form. 
-
 There is event.preventDefault(); Function to prevent the page from reloding.
 In the on "submit" Event. Here we are validating / Checking if there is an email and password "submit" when the "submit" button is clicked/push on. It's getting the VALUE (input by the End_User) and ().trim() is removing the whitespace from both ends of a string. (space, tab, no-break space, etc.) . It's Doing this for both the email and the password. 
 If we have a correct email and password entered we then run the loginUser function.  ( Explanation on Bottom for loginUser function). 
 emailInput.val("");  and  passwordInput.val(""); will Claer the Value Entered by the End-User. 
-
-the loginUser function the POST method is called to add the resource   (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to the members page, But if it catches meaning if it detects an error it will throw an error.
-
+The loginUser function the POST method is called to add the resource   (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to The members page, But if it catches meaning if it detects an error it will throw an error.
 
 
-#File members.js:
+
+# File members.js:
 
 the GET request is retrieving data to figure out which End-User is logged in. It will then run the function to display the data in the HTML (members.html) for (".member-name").
 
 
-File signup.js:
+# File signup.js:
 
 loginForm, emailInput, and passwordInput are VARIABLES referencing the HTML input form this is to Display the input by the End- User. 
-
 There is event.preventDefault(); Function to prevent the page from reloding.
 In the on "submit" Event for the login Form. Here we are validating / Checking if there is an email and password "submit" when the "submit" button is clicked/push on. It's getting the VALUE (input by the End_User) and ().trim() is removing the whitespace from both ends of a string. (space, tab, no-break space, etc.) . It's Doing this for both the email and the password. 
 If we have a correct email and password entered we then run the loginUser function.  ( Explanation on Bottom for loginUser function). 
 emailInput.val("");  and  passwordInput.val(""); will Claer the Value Entered by the End-User. 
-
-the loginUser function the POST method is called to add the resource   (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to the members page, But if it catches meaning if it detects an error it will throw an error.
+The loginUser function the POST method is called to add the resource   (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to The members page, But if it catches meaning if it detects an error it will throw an error.
 
 
 ![image](https://user-images.githubusercontent.com/67298961/105268833-7dc14580-5b58-11eb-907c-410b6e9b20a6.png)
@@ -187,25 +183,20 @@ File signup.html:
 ![image](https://user-images.githubusercontent.com/67298961/105269252-2ec7e000-5b59-11eb-93e6-73de8698b9be.png)
 
 api-routes.js File:
+
 Here its requiring the models and the passport Folder and its content to use in the api-routes.js. All the routes are within a function are to be exported and use with the passport.authenticate middleware to be redirected Either to continue with the request or redirect them to the login page (the Function is used by all routes ).
-
 The .post("/api/login") If the End-User Credentials are correct it will send the End-User to the member's page. Else if the credentials are not correct it will redirects them to an error page (passport.authenticate).
-
 The .post("/api/signup") This is the route for signing up the End-User.
-It creates the required input from the End-User which is email and password. if it's successful it well, redirect the End-User to the member's page route. If it was not successful It will throw an Error
-
+It creates the required input from the End-User which is email and password. if it's successful it well, redirect the End-User to the member's page route. If it was not successful It will throw an Error.
 The .get("/logout") Is the route to log out the End-User
 It requires a built function logout(); and redirects the End-User to the login as per redirect("/");
-
 The .get("/api/user_data") This the Route that is gathering Data from the End-User. Data that will be used for access. If the End-User is unsuccessful with his inputs it will send back and back an empty object error. If it's successful It will send back the inputted email by the End-User
 
 html-routes.js File:
+
 Here I am requiring the path to use the relative routes to our HTML files. Its also requiring the isAuthenticated Foder. The passport.authenticate middleware is checking if a user is logged in. All the routes are within a function are to be exported and use with the passport.authenticate middleware to be redirected Either to continue with the request or redirect them to the login page (the Function is used by all routes ).
-
-The .get("/"); This is the route that will send the End-User to the members page. If the End-User already has an account. This route is also using the passport.authenticate middleware. (See Above). The Function us using the "../public/signup.html" File for Display
-
-The .get("/login"); If the End-User Credentials are correct it will send the End-User to the member's page. Else if the credentials are not correct it will redirect them to an error page (passport.authenticate). The Function us using the "../public/login.html" File for Display
-
+The .get("/"); This is the route that will send the End-User to the members page. If the End-User already has an account. This route is also using the passport.authenticate middleware. (See Above). The Function us using the "../public/signup.html" File for Display.
+The .get("/login"); If the End-User Credentials are correct it will send the End-User to the member's page. Else if the credentials are not correct it will redirect them to an error page (passport.authenticate). The Function us using the "../public/login.html" File for Display.
 the .get("/members") is using the isAuthenticated middleware and is checking if an End-User is not logged in tries to access the members page. It will redirect them to the signup page("../public/members.html"). The Function us using the "../public/members.html" File for Display
 
 ## .gitignore <a name=".gitignore"></a>

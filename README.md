@@ -94,7 +94,8 @@ config Folder was created by running sequelize init:config and adds a config.jso
  middleware Folder File isAuthenticate.js:
  the passport.authenticate middleware redirected Either to continue with the request or redirect them to the login page (the Function is used by all routes ). More details with [routes](#routes) . 
 
- config.json File:
+ #### config.json File:
+
  This file is the config.json is the main configuration file. Data from config.json is used to configure virtual machine. After editing file make sure that your JSON syntax is valid. it specify global values, conditional environment and platform values, and widget dependencies.
 
 
@@ -104,12 +105,14 @@ models Folder was created by running sequelize init:models and adds a index.js f
 
 ![image](https://user-images.githubusercontent.com/67298961/105268254-7a798a00-5b57-11eb-9ca1-d2fe64609297.png)
 
-index.js file:
+#### index.js file:
+
 index.js Grabbing all the models and putting all of the models in a DB object.
 The File is being exported and being use on teh server.js to sync all the models at the same time.
 Index will read in ALL of the OTHER js files in models subdirectory, and build up a db object for you. You can then use it in your api-routes for the express server.
 
-user.js File:
+#### user.js File:
+
 Its Requiring bcrypt for the password for the transformation of a string of characters used to index and retrieve items in a database. it's a secured way to store passwords in my database
 
 It's exporting the module Function that is within the table being created.
@@ -130,7 +133,7 @@ Pubic Folder:
 The node_modules directory is only for build tools. The package. json file in the app root defines what libraries will be installed into node_modules when you run npm install . Very often with an angular app, on your dev machine or on a build server, you use other Javascript libraries from npm.
 
 
-### Folder js: .....
+### Folder js:
 
 #### File login.js:
 
@@ -148,7 +151,7 @@ The loginUser function the POST method is called to add the resource   (to the "
 the GET request is retrieving data to figure out which End-User is logged in. It will then run the function to display the data in the HTML (members.html) for (".member-name").
 
 
-### File signup.js:
+#### File signup.js:
 
 loginForm, emailInput, and passwordInput are VARIABLES referencing the HTML input form this is to Display the input by the End- User. 
 There is event.preventDefault(); Function to prevent the page from reloding.
@@ -160,21 +163,23 @@ The loginUser function the POST method is called to add the resource   (to the "
 
 ![image](https://user-images.githubusercontent.com/67298961/105268833-7dc14580-5b58-11eb-907c-410b6e9b20a6.png)
 
-Folder stylesheets: ....
+##### Folder stylesheets: ....
 
-File stlye.css
+#### File stlye.css
+
+The css style folder is given a margin-top of 50px to both the signup  and login Form so its not all on the top and is centered a little bit with its is  It is referencing the form for the signup and login
 
 ![image](https://user-images.githubusercontent.com/67298961/105268970-b95c0f80-5b58-11eb-8e77-2d4ef02f8bf1.png)
 
 
-Files login.html:
+ #### Files login.html:
 
 
-File members.html:
+#### File members.html:
 
 
 
-File signup.html:
+#### File signup.html:
 
 ![image](https://user-images.githubusercontent.com/67298961/105269152-0213c880-5b59-11eb-9ce2-724c801146b1.png)
 
@@ -182,7 +187,7 @@ File signup.html:
 
 ![image](https://user-images.githubusercontent.com/67298961/105269252-2ec7e000-5b59-11eb-93e6-73de8698b9be.png)
 
-api-routes.js File:
+#### api-routes.js File:
 
 Here its requiring the models and the passport Folder and its content to use in the api-routes.js. All the routes are within a function are to be exported and use with the passport.authenticate middleware to be redirected Either to continue with the request or redirect them to the login page (the Function is used by all routes ).
 The .post("/api/login") If the End-User Credentials are correct it will send the End-User to the member's page. Else if the credentials are not correct it will redirects them to an error page (passport.authenticate).
@@ -192,7 +197,7 @@ The .get("/logout") Is the route to log out the End-User
 It requires a built function logout(); and redirects the End-User to the login as per redirect("/");
 The .get("/api/user_data") This the Route that is gathering Data from the End-User. Data that will be used for access. If the End-User is unsuccessful with his inputs it will send back and back an empty object error. If it's successful It will send back the inputted email by the End-User
 
-html-routes.js File:
+#### html-routes.js File:
 
 Here I am requiring the path to use the relative routes to our HTML files. Its also requiring the isAuthenticated Foder. The passport.authenticate middleware is checking if a user is logged in. All the routes are within a function are to be exported and use with the passport.authenticate middleware to be redirected Either to continue with the request or redirect them to the login page (the Function is used by all routes ).
 The .get("/"); This is the route that will send the End-User to the members page. If the End-User already has an account. This route is also using the passport.authenticate middleware. (See Above). The Function us using the "../public/signup.html" File for Display.

@@ -130,17 +130,36 @@ Pubic Folder:
 The node_modules directory is only for build tools. The package. json file in the app root defines what libraries will be installed into node_modules when you run npm install . Very often with an angular app, on your dev machine or on a build server, you use other Javascript libraries from npm.
 
 
-Folder js: .....
+##Folder js: .....
+
+#File login.js:
+
+loginForm, emailInput, and passwordInput are VARIABLES referencing the html input form. 
+
+There is event.preventDefault(); Function to prevent the page from reloding.
+In the on "submit" Event. Here we are validating / Checking if there is an email and password "submit" when the "submit" button is clicked/push on. It's getting the VALUE (input by the End_User) and ().trim() is removing the whitespace from both ends of a string. (space, tab, no-break space, etc.) . It's Doing this for both the email and the password. 
+If we have a correct email and password entered we then run the loginUser function.  ( Explanation on Bottom for loginUser function). 
+emailInput.val("");  and  passwordInput.val(""); will Claer the Value Entered by the End-User. 
+
+the loginUser function the POST method is called to add the resource   (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to the members page, But if it catches meaning if it detects an error it will throw an error.
 
 
-File login.js:
 
+#File members.js:
 
-File members.js:
+the GET request is retrieving data to figure out which End-User is logged in. It will then run the function to display the data in the HTML (members.html) for (".member-name").
 
 
 File signup.js:
 
+loginForm, emailInput, and passwordInput are VARIABLES referencing the HTML input form this is to Display the input by the End- User. 
+
+There is event.preventDefault(); Function to prevent the page from reloding.
+In the on "submit" Event for the login Form. Here we are validating / Checking if there is an email and password "submit" when the "submit" button is clicked/push on. It's getting the VALUE (input by the End_User) and ().trim() is removing the whitespace from both ends of a string. (space, tab, no-break space, etc.) . It's Doing this for both the email and the password. 
+If we have a correct email and password entered we then run the loginUser function.  ( Explanation on Bottom for loginUser function). 
+emailInput.val("");  and  passwordInput.val(""); will Claer the Value Entered by the End-User. 
+
+the loginUser function the POST method is called to add the resource   (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to the members page, But if it catches meaning if it detects an error it will throw an error.
 
 
 ![image](https://user-images.githubusercontent.com/67298961/105268833-7dc14580-5b58-11eb-907c-410b6e9b20a6.png)
@@ -151,9 +170,13 @@ File stlye.css
 
 ![image](https://user-images.githubusercontent.com/67298961/105268970-b95c0f80-5b58-11eb-8e77-2d4ef02f8bf1.png)
 
+
 Files login.html:
 
+
 File members.html:
+
+
 
 File signup.html:
 

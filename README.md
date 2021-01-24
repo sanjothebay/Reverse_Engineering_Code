@@ -16,6 +16,7 @@ https://github.com/sanjothebay/Reverse_Engineering_Code
 8. [.gitignore](#.gitignore)
 9. [package.json](#package.json)
 10. [server.js](#server.js)
+11. [Video of working app](#Video_of_working_app)
 
 ## Instruction <a name="Instruction"></a>
 
@@ -241,3 +242,8 @@ The Server connection
 db.sequelize.sync() to sync all the models at the same time. used in index.js file. it Sync the database and its displays a login message to the End-User.
 
 ![image](https://user-images.githubusercontent.com/67298961/105269430-85cdb500-5b59-11eb-85c5-72500ce10197.png)
+
+
+## Video of working app <a name="Video_of_working_app"></a>
+
+![4v1vd9](https://user-images.githubusercontent.com/67298961/105619586-b0b64400-5db9-11eb-8217-4a76c99c7bad.gif)

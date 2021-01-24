@@ -88,8 +88,7 @@ All the recommended files and directories structure:
 
 ## config <a name="config"></a>
 
-config Folder was created by running sequelize init:config and adds a config.json file.. (sequelize-cli) 
-<a href="https://www.npmjs.com/package/sequelize-cli" target="_blank">sequelize-cli</a>
+config Folder was created by running sequelize init:config and adds a config.json file. <a href="https://www.npmjs.com/package/sequelize-cli" target="_blank">sequelize-cli</a>
 
 ![image](https://user-images.githubusercontent.com/67298961/105268545-0db2bf80-5b58-11eb-9433-41b409a2ae28.png)
 
@@ -102,8 +101,7 @@ This file is the config.json is the main configuration file. Data from config.js
 
 ## models <a name="models"></a>
 
-models Folder was created by running sequelize init:models and adds a index.js file.. (sequelize-cli) 
-<a href="https://www.npmjs.com/package/sequelize-cli" target="_blank">sequelize-cli</a>
+models Folder was created by running sequelize init:models and adds a index.js file. <a href="https://www.npmjs.com/package/sequelize-cli" target="_blank">sequelize-cli</a>
 
 ![image](https://user-images.githubusercontent.com/67298961/105268254-7a798a00-5b57-11eb-9ca1-d2fe64609297.png)
 

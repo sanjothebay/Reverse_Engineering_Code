@@ -90,14 +90,13 @@ All the recommended files and directories structure:
 config Folder was created by running sequelize init:config and adds a config.json file.. (sequelize cli)
 
 ![image](https://user-images.githubusercontent.com/67298961/105268545-0db2bf80-5b58-11eb-9433-41b409a2ae28.png)
- 
- middleware Folder File isAuthenticate.js:
- the passport.authenticate middleware redirected Either to continue with the request or redirect them to the login page (the Function is used by all routes ). More details with [routes](#routes) . 
 
- #### config.json File:
+middleware Folder File isAuthenticate.js:
+the passport.authenticate middleware redirected Either to continue with the request or redirect them to the login page (the Function is used by all routes ). More details with [routes](#routes) .
 
- This file is the config.json is the main configuration file. Data from config.json is used to configure virtual machine. After editing file make sure that your JSON syntax is valid. it specify global values, conditional environment and platform values, and widget dependencies.
+#### config.json File:
 
+This file is the config.json is the main configuration file. Data from config.json is used to configure virtual machine. After editing file make sure that your JSON syntax is valid. it specify global values, conditional environment and platform values, and widget dependencies.
 
 ## models <a name="models"></a>
 
@@ -132,52 +131,43 @@ these are methods that run during the various phases of the User Model lifecycle
 Pubic Folder:
 The node_modules directory is only for build tools. The package. json file in the app root defines what libraries will be installed into node_modules when you run npm install . Very often with an angular app, on your dev machine or on a build server, you use other Javascript libraries from npm.
 
-
 ### Folder js:
 
 #### File login.js:
 
-loginForm, emailInput, and passwordInput are VARIABLES referencing the html input form. 
+loginForm, emailInput, and passwordInput are VARIABLES referencing the html input form.
 There is event.preventDefault(); Function to prevent the page from reloding.
-In the on "submit" Event. Here we are validating / Checking if there is an email and password "submit" when the "submit" button is clicked/push on. It's getting the VALUE (input by the End_User) and ().trim() is removing the whitespace from both ends of a string. (space, tab, no-break space, etc.) . It's Doing this for both the email and the password. 
-If we have a correct email and password entered we then run the loginUser function.  ( Explanation on Bottom for loginUser function). 
-emailInput.val("");  and  passwordInput.val(""); will Claer the Value Entered by the End-User. 
-The loginUser function the POST method is called to add the resource   (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to The members page, But if it catches meaning if it detects an error it will throw an error.
-
-
+In the on "submit" Event. Here we are validating / Checking if there is an email and password "submit" when the "submit" button is clicked/push on. It's getting the VALUE (input by the End_User) and ().trim() is removing the whitespace from both ends of a string. (space, tab, no-break space, etc.) . It's Doing this for both the email and the password.
+If we have a correct email and password entered we then run the loginUser function. ( Explanation on Bottom for loginUser function).
+emailInput.val(""); and passwordInput.val(""); will Claer the Value Entered by the End-User.
+The loginUser function the POST method is called to add the resource (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to The members page, But if it catches meaning if it detects an error it will throw an error.
 
 #### File members.js:
 
 the GET request is retrieving data to figure out which End-User is logged in. It will then run the function to display the data in the HTML (members.html) for (".member-name").
 
-
 #### File signup.js:
 
-loginForm, emailInput, and passwordInput are VARIABLES referencing the HTML input form this is to Display the input by the End- User. 
+loginForm, emailInput, and passwordInput are VARIABLES referencing the HTML input form this is to Display the input by the End- User.
 There is event.preventDefault(); Function to prevent the page from reloding.
-In the on "submit" Event for the login Form. Here we are validating / Checking if there is an email and password "submit" when the "submit" button is clicked/push on. It's getting the VALUE (input by the End_User) and ().trim() is removing the whitespace from both ends of a string. (space, tab, no-break space, etc.) . It's Doing this for both the email and the password. 
-If we have a correct email and password entered we then run the loginUser function.  ( Explanation on Bottom for loginUser function). 
-emailInput.val("");  and  passwordInput.val(""); will Claer the Value Entered by the End-User. 
-The loginUser function the POST method is called to add the resource   (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to The members page, But if it catches meaning if it detects an error it will throw an error.
-
+In the on "submit" Event for the login Form. Here we are validating / Checking if there is an email and password "submit" when the "submit" button is clicked/push on. It's getting the VALUE (input by the End_User) and ().trim() is removing the whitespace from both ends of a string. (space, tab, no-break space, etc.) . It's Doing this for both the email and the password.
+If we have a correct email and password entered we then run the loginUser function. ( Explanation on Bottom for loginUser function).
+emailInput.val(""); and passwordInput.val(""); will Claer the Value Entered by the End-User.
+The loginUser function the POST method is called to add the resource (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to The members page, But if it catches meaning if it detects an error it will throw an error.
 
 ![image](https://user-images.githubusercontent.com/67298961/105268833-7dc14580-5b58-11eb-907c-410b6e9b20a6.png)
 
-##### Folder stylesheets: ....
+### Folder stylesheets:
 
 #### File stlye.css
 
-The css style folder is given a margin-top of 50px to both the signup  and login Form so its not all on the top and is centered a little bit with its is  It is referencing the form for the signup and login
+The css style folder is given a margin-top of 50px to both the signup and login Form so its not all on the top and is centered a little bit with its is It is referencing the form for the signup and login
 
 ![image](https://user-images.githubusercontent.com/67298961/105268970-b95c0f80-5b58-11eb-8e77-2d4ef02f8bf1.png)
 
-
- #### Files login.html:
-
+#### Files login.html:
 
 #### File members.html:
-
-
 
 #### File signup.html:
 
@@ -219,10 +209,10 @@ A package. json is a JSON file that exists at the root of a Javascript/Node proj
 
 ## server.js <a name="server.js"></a>
 
-its requiring express, express-session these are necessary npm packages to have the app fuctioning in with node. Its requiring "./config/passport" File as it been configured. Its Setting up port and requiring models for syncing with var PORT = process.env.PORT || 8080; 
-its also Creating the express app and configuring middleware this is needed for authentication in the password 
-Its is also requiring our routes to the HTML and the API . "./routes/html-routes.js"  "./routes/api-routes.js"  
-The Server connection 
-db.sequelize.sync() to sync all the models at the same time. used in index.js file. it Sync the  database and its displays a login message to the End-User.
+its requiring express, express-session these are necessary npm packages to have the app fuctioning in with node. Its requiring "./config/passport" File as it been configured. Its Setting up port and requiring models for syncing with var PORT = process.env.PORT || 8080;
+its also Creating the express app and configuring middleware this is needed for authentication in the password
+Its is also requiring our routes to the HTML and the API . "./routes/html-routes.js" "./routes/api-routes.js"  
+The Server connection
+db.sequelize.sync() to sync all the models at the same time. used in index.js file. it Sync the database and its displays a login message to the End-User.
 
 ![image](https://user-images.githubusercontent.com/67298961/105269430-85cdb500-5b59-11eb-85c5-72500ce10197.png)

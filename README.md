@@ -153,7 +153,7 @@ There is event.preventDefault(); Function to prevent the page from reloding.
 In the on "submit" Event for the login Form. Here we are validating / Checking if there is an email and password "submit" when the "submit" button is clicked/push on. It's getting the VALUE (input by the End_User) and ().trim() is removing the whitespace from both ends of a string. (space, tab, no-break space, etc.) . It's Doing this for both the email and the password.
 If we have a correct email and password entered we then run the loginUser function. ( Explanation on Bottom for loginUser function).
 emailInput.val(""); and passwordInput.val(""); will Claer the Value Entered by the End-User.
-The loginUser function the POST method is called to add the resource (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to The members page, But if it catches meaning if it detects an error it will throw an error.
+The loginUser function the POST method is called to add the resource (to the "api/login" route the email and password). If the POST was successful (accepts the data) it will redirect the End-User to The members page, But if it catches meaning if it detects an error it will throw an error. handleLoginErr(err) Function Handle the Error Alert. This will DIsplay if there is a generic error response It means that the server encountered an unexpected condition that prevented it from fulfilling the request. This error is usually returned by the server when no other error code is suitable.
 
 ![image](https://user-images.githubusercontent.com/67298961/105268833-7dc14580-5b58-11eb-907c-410b6e9b20a6.png)
 
@@ -171,13 +171,30 @@ This is the First page the End-User will see if he is not already sign-up.
 The login.html will render (Display) the Login Form.
 The Head Section is showing the Title to Display on the web Tab. It has a UTF-8 for the encoding Defined by the Unicode Standard it supports many languages and can accommodate pages and forms in any mixture of those languages. Its use also eliminates the need for server-side logic to individually determine the character encoding for each page served or each incoming form submission.
 It's Grabbing the Bootstrap style for the Styling of the Form as it is grabbed from Bootstrap. We are also referencing the "stylesheets/style.css" folder to added the margin-top of 50px (See File stlye.css explanation (on top)).  
-The next section is the Form that is being used from Bootstrap. It has on Row for the whole Form, It's using a <div> to divide within the one Row the page will use 3 sections from the 12 that its has is will work well with medium size monitors. (Default with the rest using bootstraps column structure.). It's Displaying Login Form Words to show it's the Login Form page. It has an input section for the End-user to enter is Email and Password. The Input Section are Displaying the words Email and Password, In order for the End-User to know which input is which. There is a Login in Button Being Displayed for the End-User to use when they are Done to log in.
+The next section is the Form that is being used from Bootstrap. It has on Row for the whole Form, It's using a div to divide within the one Row the page will use 3 sections from the 12 that its has is will work well with medium size monitors. (Default with the rest using bootstraps column structure.). It's Displaying Login Form Words to show it's the Login Form page. It has an input section for the End-user to enter is Email and Password. The Input Section are Displaying the words Email and Password, In order for the End-User to know which input is which. There is a Login in Button Being Displayed for the End-User to use when they are Done to log in.
 The Last section is displaying (rendering) Or sign up and it has a href to reference and reroute the End-User to the login page if they have not sign up.
-The bottom script section has the jquery fundamental structure so we can use jquery in our code. In the last script section we are referencing our login.js file to be able to use the form and the function it comes with
+The bottom script section has the jquery fundamental structure so we can use jquery in our code. In the last script section we are referencing our login.js file to be able to use the form and the function it comes with see [public](#public) . for an explanation of the Button and input section (login.js)
 
 #### File members.html:
 
+This is the page the in where the End-User will see the Welcome page when logged in or after sign-up.
+The members.html will render (Display) the members Welcome page.
+The Head Section is showing the Title to Display on the web Tab. It has a UTF-8 for the encoding Defined by the Unicode Standard it supports many languages and can accommodate pages and forms in any mixture of those languages. Its use also eliminates the need for server-side logic to individually determine the character encoding for each page served or each incoming form submission.
+It's Grabbing the Bootstrap style for the Styling of the Form as it is grabbed from Bootstrap.
+The page has a logout (like a button) to log you out and return you to the login page. The next section is the Form that is being used from Bootstrap. It has on Row for the whole Form, It's using a div to divide within the one Row the page will use 3 sections from the 12 that it has is will work well with medium size monitors. (Default with the rest using bootstraps column structure.). It will Display a Welcome with the Correct Inputted email that the End-User inputted in the login or sign up page. 
+The bottom script section has the jquery fundamental structure so we can use jquery in our code. In the last script section we are referencing our login.js file to be able to use the form and the function it comes with see [public](#public) . for an explanation of the Button and input section (login.js)
+
+
 #### File signup.html:
+
+This is the First page the End-User will see if he is not already sign-up.
+The login.html will render (Display) the Login Form.
+The Head Section is showing the Title to Display on the web Tab. It has a UTF-8 for the encoding Defined by the Unicode Standard it supports many languages and can accommodate pages and forms in any mixture of those languages. Its use also eliminates the need for server-side logic to individually determine the character encoding for each page served or each incoming form submission.
+It's Grabbing the Bootstrap style for the Styling of the Form as it is grabbed from Bootstrap. We are also referencing the "stylesheets/style.css" folder to added the margin-top of 50px (See File stlye.css explanation (on top)).  
+The next section is the Form that is being used from Bootstrap. It has on Row for the whole Form, It's using a div to divide within the one Row the page will use 3 sections from the 12 that its has is will work well with medium size monitors. (Default with the rest using bootstraps column structure.). It's Displaying signup Form Words to show it's the signup Form page. It has an input section for the End-user to enter is Email and Password. The Input Section are Displaying the words Email and Password, In order for the End-User to know which input is which.  The Error Div is handling the function Error in signup.js handleLoginErr(err) Function Handle the Error Alert. This will DIsplay if there is a generic error response It means that the server encountered an unexpected condition that prevented it from fulfilling the request. This error is usually returned by the server when no other error code is suitable. The fuction will Display a Error alert . There is a signup in Button Being Displayed for the End-User to use when they are Done to log in.
+The Last section is displaying (rendering) Or sign up and it has a href to reference and reroute the End-User to the login page if they have not sign up.
+The bottom script section has the jquery fundamental structure so we can use jquery in our code. In the last script section we are referencing our login.js file to be able to use the form and the function it comes with see [public](#public) . for an explanation of the Button and input section (login.js)
+
 
 ![image](https://user-images.githubusercontent.com/67298961/105269152-0213c880-5b59-11eb-9ce2-724c801146b1.png)
 
